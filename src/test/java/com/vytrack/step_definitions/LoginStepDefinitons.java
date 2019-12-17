@@ -14,9 +14,21 @@ public class LoginStepDefinitons {
         System.out.println("Login as store manager");
     }
 
+    //any string in "word" will become a parameter for step definition method
+    //  And user verifies that "Dashboard" page subtitle is displayed
     @Then("user verifies that {string} page subtitle is displayed")
     public void user_verifies_that_page_subtitle_is_displayed(String string) {
         System.out.println("Verifying page subtitle: "+string);
+    }
+
+    @Then("user logs is as driver")
+    public void user_logs_is_as_driver() {
+        System.out.println("Login as driver");
+    }
+
+    @Then("user logs is as sales manager")
+    public void user_logs_is_as_sales_manager() {
+        System.out.println("Login as sales manager");
     }
 
 }
