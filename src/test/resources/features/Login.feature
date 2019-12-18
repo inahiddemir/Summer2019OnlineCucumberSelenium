@@ -12,19 +12,19 @@ Feature: Login
 
   @store_manager
   Scenario: Login as store manager
-    Given user is on the landing page
+    Given user is on the login page
     Then user logs is as store manager
     And user verifies that "Dashboard" page subtitle is displayed
 
   @driver
   Scenario: Login as driver
-    Given user is on the landing page
+    Given user is on the login page
     Then user logs is as driver
     And user verifies that "Dashboard" page subtitle is displayed
 
   @sales_manager
   Scenario: Login as sales manager
-    Given user is on the landing page
+    Given user is on the login page
     Then user logs is as sales manager
     And user verifies that "Dashboard" page subtitle is displayed
 

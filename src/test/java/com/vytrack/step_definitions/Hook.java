@@ -1,5 +1,6 @@
 package com.vytrack.step_definitions;
 
+import com.vytrack.utilities.Driver;
 import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -10,6 +11,7 @@ public class Hook {
     public void setup(){
         System.out.println("#####################################");
         System.out.println("Test setup!");
+        Driver.get().manage().window().maximize();
     }
 
     @After  ////it should come from io.cucumber NOT JUnit  - if you get Junit after method its not working properly
@@ -23,5 +25,7 @@ public class Hook {
             System.out.println("Test completed");
         }
         System.out.println("#####################################");
+        //After every test we are gonna close the browser
+        Driver.close();
     }
 }
