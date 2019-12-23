@@ -173,8 +173,13 @@ public class BrowserUtils {
      */
     public static List<String> getListOfString(List<WebElement> listOfWebElements){
         List<String> listOfStrings = new ArrayList<>();
-        for(WebElement element:listOfWebElements){
-            listOfStrings.add(element.getText().trim());
+        for(WebElement element : listOfWebElements){
+            //if there is no text
+            //do not add this blank text into list
+            String value = element.getText().trim();
+            if(value.length() > 0) {
+                listOfStrings.add(value);
+            }
         }
         return listOfStrings;
     }
