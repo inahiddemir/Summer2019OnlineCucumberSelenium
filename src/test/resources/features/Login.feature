@@ -46,5 +46,10 @@ Feature: Login
     Then user logs in as driver with following credentials
         |username |user160     |
         |password |UserUser123 |
-    And user verifies that "Quick Launchpad" page subtitle is displayed 
+    And user verifies that "Quick Launchpad" page subtitle is displayed
+
+  Scenario: Login as  role
+    Given user is on the login page
+    Then user logs in as "role"
+
 
