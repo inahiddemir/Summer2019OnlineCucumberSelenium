@@ -67,4 +67,10 @@ public class LoginStepDefinitions {
         BrowserUtils.wait(1);  //My slow internet
         Assert.assertEquals("Quick Launchpad", loginPage.getPageSubTitle());
     }
+
+    @Then("user logs in as {string}")
+    public void user_logs_in_as(String role) {
+        loginPage.login(role);
+    }
+
 }
